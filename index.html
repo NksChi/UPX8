@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Mentor - Conecte-se com quem inspira</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images\favicon.ico">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav aria-label="Navegação principal">
+    <img src="images/Rede_Mentor.png" alt="Logo Rede Mentor">
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="mentores.html">Mentores</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <h2>
+            Conecte-se com quem inspira o seu sucesso
+        </h2>
+        <p>
+            Na Rede Mentor, conectamos jovens empreendedores a mentores experientes que compartilham
+            conselhos, aprendizados e oportunidades reais para o seu crescimento.
+        </p>
+        <a href="sobre.html" class="primary">Saiba Mais</a>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <h1>Por que usar a Rede Mentor?</h1>
+        <p>Descubra como nossa plataforma pode transformar sua jornada empreendedora com conexões e aprendizados reais.</p>
+
+        <div class="fea-base">
+            <div class="fea-box" role="article">
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                <h3>Mentoria Personalizada</h3>
+                <p>Encontre mentores que combinam com seus objetivos e receba orientação sob medida para o seu crescimento.</p>
+            </div>
+            <div class="fea-box" role="article">
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                <h3>Aprendizado com Experiência</h3>
+                <p>Aprenda com profissionais que já trilharam o caminho do sucesso e compartilham dicas práticas do mercado.</p>
+            </div>
+            <div class="fea-box" role="article">
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                <h3>Rede de Conexões</h3>
+                <p>Construa relacionamentos valiosos com outros empreendedores e amplie suas oportunidades de negócio.</p>
+            </div>
+            <div class="fea-box" role="article">
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                <h3>Objetivos Acompanhados</h3>
+                <p>Defina metas claras e acompanhe seu progresso junto ao seu mentor, com feedbacks e resultados reais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentorias -->
+    <section id="mentorias">
+        <h1>Áreas de Mentoria</h1>
+        <p>Escolha a área que mais combina com seus objetivos e conecte-se com mentores experientes.</p>
+
+        <!-- Botões de filtro -->
+        <div class="filter-btn">
+            <button class="btn-filter" onclick="filterMentorias('all')">Todas</button>
+            <button class="btn-filter" onclick="filterMentorias('startup')">Startups</button>
+            <button class="btn-filter" onclick="filterMentorias('marketing')">Marketing</button>
+            <button class="btn-filter" onclick="filterMentorias('financas')">Finanças</button>
+            <button class="btn-filter" onclick="filterMentorias('lideranca')">Liderança</button>
+        </div>
+
+        <div class="mentoria-cards">
+            <div class="mentoria-card" data-category="startup">
+                <img src="images/c1.jpg" alt="Mentoria de Startups">
+                <h6>Mentoria para Startups Iniciantes</h6>
+                <p>Aprenda a estruturar seu negócio e acelerar o crescimento da sua startup.</p>
+            </div>
+
+            <div class="mentoria-card" data-category="marketing">
+                <img src="images/c2.jpg" alt="Mentoria de Marketing">
+                <h6>Marketing Digital Estratégico</h6>
+                <p>Descubra técnicas práticas para aumentar a visibilidade e vendas do seu negócio.</p>
+            </div>
+
+            <div class="mentoria-card" data-category="financas">
+                <img src="images/c3.jpg" alt="Mentoria Financeira">
+                <h6>Gestão Financeira para Empreendedores</h6>
+                <p>Aprenda a organizar suas finanças e tomar decisões estratégicas seguras.</p>
+            </div>
+
+            <div class="mentoria-card" data-category="lideranca">
+                <img src="images/c4.jpg" alt="Mentoria de Liderança">
+                <h6>Desenvolvimento de Liderança</h6>
+                <p>Melhore suas habilidades de liderança e gestão de equipes de forma prática.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registro -->
+    <section id="registro">
+        <div class="reminder">
+            <p>Receba novidades e dicas exclusivas dos nossos mentores</p>
+            <h1>Cadastre-se Gratuitamente!</h1>
+        </div>
+        <div class="form">
+            <h3>Crie sua conta e comece sua jornada com a Rede Mentor</h3>
+            <input type="text" placeholder="Seu Nome" name="name" id="name">
+            <input type="email" placeholder="Seu E-mail" name="email" id="email">
+            <input type="tel" placeholder="Telefone (opcional)" name="phone" id="phone">
+            <div class="btn">
+                <a class="btn-submit" href="#" onclick="submitRegistration(event)">Cadastrar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentores -->
+    <section id="mentores">
+        <h1>Nossos Mentores</h1>
+        <p>Conheça os profissionais que irão guiar sua jornada empreendedora com experiência e dicas práticas.</p>
+
+        <div class="mentor-box">
+            <div class="mentor-profile">
+                <img src="images/pro1.webp" alt="Ana Costa">
+                <h6>Ana Costa</h6>
+                <p>Mentora em Estratégias de Negócio</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="mentor-profile">
+                <img src="images/pro2.webp" alt="Lucas Mendes">
+                <h6>Lucas Mendes</h6>
+                <p>Mentor em Planejamento Financeiro</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="mentor-profile">
+                <img src="images/pro4.webp" alt="Mariana Silva">
+                <h6>Mariana Silva</h6>
+                <p>Mentora em Desenvolvimento Pessoal</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="mentor-profile">
+                <img src="images/pro3.webp" alt="Rafael Oliveira">
+                <h6>Rafael Oliveira</h6>
+                <p>Mentor em Marketing e Design</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <h3>Nossos Mentores</h3>
+            <li>Estratégias de Negócio</li>
+            <li>Planejamento Financeiro</li>
+            <li>Desenvolvimento Pessoal</li>
+            <li>Marketing e Design</li>
+        </div>
+        <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#mentores">Mentores</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Benefícios</h3>
+            <li>Mentorias Gratuitas</li>
+            <li>Conteúdo Prático</li>
+            <li>Comunidade Engajada</li>
+            <li>Crescimento Profissional</li>
+        </div>
+        <div class="footer-col">
+        <h3>Nossos Mentores</h3>
+        <ul>
+            <li>Estratégias de Negócio</li>
+            <li>Planejamento Financeiro</li>
+            <li>Desenvolvimento Pessoal</li>
+            <li>Marketing e Design</li>
+        </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Recursos</h3>
+            <li>Guias de Mentoria</li>
+            <li>Artigos e Pesquisas</li>
+            <li>Dicas de Carreira</li>
+            <li>Ferramentas Práticas</li>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Receba dicas e novidades sobre mentoria diretamente no seu e-mail.</p>
+            <div class="subscribe">
+                <input type="email" placeholder="Seu e-mail" id="newsletter-email">
+                <a class="lightblue" href="#" onclick="subscribeNewsletter(event)">Inscrever-se</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2025 Todos os direitos reservados | Rede Mentor - Sua jornada guiada pelos melhores mentores</p>
+        </div>
+    </footer>
+
+    <!-- Modal para Mentorias -->
+    <div id="mentorModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMentorModal()">×</span>
+            <h3 id="mentorModalTitle"></h3>
+            <p id="mentorModalDescription"></p>
+            <div class="btn">
+                <a class="link" id="mentorModalLink" href="#" target="_blank">Acessar Conteúdo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Abrir modal de mentoria
+        function openMentorModal(title, description, link) {
+        document.getElementById('mentorModalTitle').textContent = title;
+        document.getElementById('mentorModalDescription').textContent = description;
+        document.getElementById('mentorModalLink').href = link;
+        document.getElementById('mentorModal').style.display = 'block';
+        }
+        function closeMentorModal() {
+        document.getElementById('mentorModal').style.display = 'none';
+        }
+
+        // Filtros de Mentorias
+        function filterMentorias(category) {
+        const mentors = document.querySelectorAll('.mentoria-card');
+        mentors.forEach(mentor => {
+            mentor.style.display = (category === 'all' || mentor.dataset.category === category) ? 'block' : 'none';
+        });
+        }
+
+        // Dados das Mentorias
+        const mentorData = {
+        "Ana Costa": { description: "Especialista em estratégias de negócios para startups e pequenos empreendedores.", link: "mentores.html" },
+        "Lucas Mendes": { description: "Engenheiro de processos, ajuda a otimizar sua rotina profissional e financeira.", link: "mentores.html" },
+        "Mariana Silva": { description: "Consultora em projetos sustentáveis, mostrando práticas aplicáveis no dia a dia.", link: "mentores.html" },
+        "Rafael Oliveira": { description: "Especialista em design e marketing, ensina como destacar sua marca pessoal.", link: "mentores.html" }
+        };
+
+        // Abrir modal ao clicar em mentor
+        document.querySelectorAll('.mentor-profile').forEach(mentor => {
+        mentor.addEventListener('click', () => {
+            const title = mentor.querySelector('h6').textContent;
+            const data = mentorData[title];
+            if (data) openMentorModal(title, data.description, data.link);
+        });
+        });
+
+        // Formulário de Inscrição
+        function submitRegistration(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        if (name && email) {
+            alert(`Inscrição realizada com sucesso! Bem-vindo(a) à Rede Mentor, ${name}!`);
+            ['name', 'email', 'phone'].forEach(id => document.getElementById(id).value = '');
+        } else {
+            alert('Por favor, preencha nome e e-mail.');
+        }
+        }
+
+        // Newsletter
+        function subscribeNewsletter(event) {
+        event.preventDefault();
+        const email = document.getElementById('newsletter-email').value;
+        if (email) {
+            alert(`Inscrição na newsletter realizada com sucesso! Você receberá nossas dicas em ${email}`);
+            document.getElementById('newsletter-email').value = '';
+        } else {
+            alert('Por favor, insira um e-mail válido.');
+        }
+        }
+
+        // Navegação Dinâmica
+        const navLinks = document.querySelectorAll('.navigation a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

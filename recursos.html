@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Mentor - Conecte-se com quem inspira</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav aria-label="Navegação principal">
+        <img src="images/Rede_Mentor.png" alt="Logo Rede Mentor">
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="recursos.html" class="active">Recursos</a></li>
+                <li><a href="mentores.html">Mentores</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Recursos -->
+    <section id="sobre-home" aria-labelledby="recursos-title">
+        <h2 id="recursos-title">Recursos da Rede Mentor</h2>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section id="recursos-container">
+        <div class="recursos-lista">
+            <div class="recurso-card" data-category="carreira">
+                <h3>Como Alavancar Sua Carreira com Mentoria</h3>
+                <p>Descubra como o acompanhamento de um mentor pode acelerar seu crescimento profissional, ajudando você a tomar decisões estratégicas e assertivas.</p>
+                <a href="#" class="ver-mais" data-link="https://exame.com/hub-faculdade-exame/mentoria-de-carreira-o-que-e-quais-os-beneficios-e-como-ela-pode-alavancar-a-sua-vida-profissional">Saiba Mais</a>
+            </div>
+
+            <div class="recurso-card" data-category="desenvolvimento-pessoal">
+                <h3>10 Dicas para Potencializar seu Desenvolvimento Pessoal</h3>
+                <p>Aprenda técnicas práticas de autoconhecimento e foco para alcançar seus objetivos e melhorar sua produtividade no dia a dia.</p>
+                <a href="#" class="ver-mais" data-link="https://blog.portoseguro.com.br/10-habitos-para-estimular-o-seu-desenvolvimento-pessoal">Saiba Mais</a>
+            </div>
+
+            <div class="recurso-card" data-category="lideranca">
+                <h3>Como se Tornar um Líder Inspirador</h3>
+                <p>Entenda as habilidades que fazem um bom líder e como mentores podem ajudar a desenvolver sua capacidade de inspirar e guiar equipes.</p>
+                <a href="#" class="ver-mais" data-link="https://gptw.com.br/conteudo/artigos/lideranca-inspiradora">Saiba Mais</a>
+            </div>
+
+            <div class="recurso-card" data-category="networking">
+                <h3>Networking Eficiente: Construa Conexões Reais</h3>
+                <p>Saiba como expandir sua rede de contatos de forma genuína e estratégica, fortalecendo oportunidades profissionais e pessoais.</p>
+                <a href="#" class="ver-mais" data-link="https://lojaintegrada.com.br/hub/o-que-e-network">Saiba Mais</a>
+            </div>
+
+            <div class="recurso-card" data-category="empreendedorismo">
+                <h3>Empreendendo com Propósito</h3>
+                <p>Descubra como alinhar sua paixão com um negócio sustentável e de impacto, com o apoio de mentores experientes.</p>
+                <a href="#" class="ver-mais" data-link="https://sebrae.com.br/sites/PortalSebrae/empreender-com-proposito-e-motivacao,f3ce396cb4fd1810VgnVCM100000d701210aRCRD">Saiba Mais</a>
+            </div>
+
+            <div class="recurso-card" data-category="produtividade">
+                <h3>Produtividade e Foco: O Guia do Mentor</h3>
+                <p>Explore métodos simples e eficazes para aumentar sua produtividade e equilibrar a rotina entre estudo, trabalho e vida pessoal.</p>
+                <a href="#" class="ver-mais" data-link="https://sebrae.com.br/sites/PortalSebrae/ufs/sp/artigos/produtividade-no-trabalho-um-guia-para-fazer-mais-em-menos-tempo,3650ebdc4698d810VgnVCM1000001b00320aRCRD">Saiba Mais</a>
+            </div>
+        </div>
+
+        <div class="recursos-categorias">
+            <h2>Categorias</h2>
+            <hr>
+            <a href="#" data-category="all">Todas</a><hr>
+            <a href="#" data-category="carreira">Carreira</a><hr>
+            <a href="#" data-category="desenvolvimento-pessoal">Desenvolvimento Pessoal</a><hr>
+            <a href="#" data-category="lideranca">Liderança</a><hr>
+            <a href="#" data-category="networking">Networking</a><hr>
+            <a href="#" data-category="empreendedorismo">Empreendedorismo</a><hr>
+            <a href="#" data-category="produtividade">Produtividade</a><hr>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <h3>Nossos Mentores</h3>
+            <li>Estratégias de Negócio</li>
+            <li>Planejamento Financeiro</li>
+            <li>Desenvolvimento Pessoal</li>
+            <li>Marketing e Design</li>
+        </div>
+        <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#sobre.html">Sobre</a></li>
+            <li><a href="#mentores.html">Mentores</a></li>
+            <li><a href="#recursos.html">Recursos</a></li>
+            <li><a href="#contato.html">Contato</a></li>
+        </div>
+        <div class="footer-col">
+            <h3>Benefícios</h3>
+            <li>Mentorias Gratuitas</li>
+            <li>Conteúdo Prático</li>
+            <li>Comunidade Engajada</li>
+            <li>Crescimento Profissional</li>
+        </div>
+        <div class="footer-col">
+        <h3>Nossos Mentores</h3>
+        <ul>
+            <li>Estratégias de Negócio</li>
+            <li>Planejamento Financeiro</li>
+            <li>Desenvolvimento Pessoal</li>
+            <li>Marketing e Design</li>
+        </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Recursos</h3>
+            <li>Guias de Mentoria</li>
+            <li>Artigos e Pesquisas</li>
+            <li>Dicas de Carreira</li>
+            <li>Ferramentas Práticas</li>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Receba dicas e novidades sobre mentoria diretamente no seu e-mail.</p>
+            <div class="subscribe">
+                <input type="email" placeholder="Seu e-mail" id="newsletter-email">
+                <a class="lightblue" href="#" onclick="subscribeNewsletter(event)">Inscrever-se</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2025 Todos os direitos reservados | Rede Mentor - Sua jornada guiada pelos melhores mentores</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="recursoModal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRecursoModal()">×</button>
+            <div class="modal-header">
+                <h3 id="modalTitulo"></h3>
+            </div>
+            <p id="modalDescricao"></p>
+            <div class="modal-footer">
+                <a id="modalLink" href="#" target="_blank" class="btn-primary">Acessar Recurso Completo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Ativar link da navegação atual
+        document.querySelectorAll('.navigation a').forEach(link => {
+            link.classList.toggle('active', link.href === window.location.href);
+        });
+
+        // Filtro de categorias
+        const categorias = document.querySelectorAll('.recursos-categorias a');
+        const cards = document.querySelectorAll('.recurso-card');
+
+        // Ativar "Todas" por padrão
+        document.querySelector('[data-category="all"]').classList.add('active');
+
+        categorias.forEach(cat => {
+            cat.addEventListener('click', e => {
+                e.preventDefault();
+                const categoria = cat.dataset.category;
+
+                // Atualiza classe active
+                categorias.forEach(c => c.classList.remove('active'));
+                cat.classList.add('active');
+
+                // Filtra cards
+                cards.forEach(card => {
+                    const show = categoria === 'all' || card.dataset.category === categoria;
+                    card.style.display = show ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Modal
+        const modal = document.getElementById('recursoModal');
+        const modalTitulo = document.getElementById('modalTitulo');
+        const modalDescricao = document.getElementById('modalDescricao');
+        const modalLink = document.getElementById('modalLink');
+
+        document.querySelectorAll('.ver-mais').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const card = link.closest('.recurso-card');
+                modalTitulo.textContent = card.querySelector('h3').textContent.trim();
+                modalDescricao.textContent = card.querySelector('p').textContent.trim();
+                modalLink.href = link.dataset.link;
+                modal.style.display = 'flex';
+            });
+        });
+
+        function closeRecursoModal() {
+            modal.style.display = 'none';
+        }
+
+        // Fechar modal ao clicar fora
+        modal.addEventListener('click', e => {
+            if (e.target === modal) closeRecursoModal();
+        });
+
+        // Newsletter
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value.trim();
+            if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert(`Inscrição realizada com sucesso! Você receberá novidades em: ${email}`);
+                document.getElementById('newsletter-email').value = '';
+            } else {
+                alert('Por favor, insira um e-mail válido.');
+            }
+        }
+
+        // Animação de entrada (Intersection Observer)
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.recurso-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Tornar função global (para onclick no HTML)
+        window.subscribeNewsletter = subscribeNewsletter;
+        window.closeRecursoModal = closeRecursoModal;
+        </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Mentor - Conecte-se com quem inspira</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav aria-label="Navegação principal">
+        <img src="images/Rede_Mentor.png" alt="Logo Rede Mentor">
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="mentores.html" class="active">Mentores</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Título -->
+    <section id="sobre-home">
+        <h2>Nossos Mentores</h2>
+        <p>Conecte-se com profissionais experientes que vão acelerar seu crescimento.</p>
+    </section>
+
+    <!-- Filtros de Especialidade -->
+    <section id="mentors-section">
+        <h3>Filtros de Especialidade</h3>
+        <div class="filter-buttons">
+            <button class="btn-filter active" onclick="filterMentors('all')">Todos</button>
+            <button class="btn-filter" onclick="filterMentors('carreira')">Carreira</button>
+            <button class="btn-filter" onclick="filterMentors('lideranca')">Liderança</button>
+            <button class="btn-filter" onclick="filterMentors('empreendedorismo')">Empreendedorismo</button>
+            <button class="btn-filter" onclick="filterMentors('desenvolvimento')">Desenv. Pessoal</button>
+            <button class="btn-filter" onclick="filterMentors('tecnologia')">Tecnologia</button>
+        </div>
+
+        <div class="mentors-grid">
+            <!-- Mentor 1 -->
+            <div class="mentor-card" data-category="carreira">
+                <img src="images/pro1.webp" alt="Ana Silva" loading="lazy">
+                <div class="mentor-info">
+                    <h5>Ana Silva</h5>
+                    <p class="expertise">Especialista em Carreira & Transição</p>
+                </div>
+            </div>
+
+            <!-- Mentor 2 -->
+            <div class="mentor-card" data-category="lideranca">
+                <img src="images/pro2.webp" alt="Carlos Mendes" loading="lazy">
+                <div class="mentor-info">
+                    <h5>Carlos Mendes</h5>
+                    <p class="expertise">Líder de Equipes & Gestão</p>
+                </div>
+            </div>
+
+            <!-- Mentor 3 -->
+            <div class="mentor-card" data-category="empreendedorismo">
+                <img src="images/pro3.webp" alt="Julia Costa" loading="lazy">
+                <div class="mentor-info">
+                    <h5>Julia Costa</h5>
+                    <p class="expertise">Empreendedora & Startups</p>
+                </div>
+            </div>
+
+            <!-- Mentor 4 -->
+            <div class="mentor-card" data-category="desenvolvimento">
+                <img src="images/pro4.webp" alt="Roberto Lima" loading="lazy">
+                <div class="mentor-info">
+                    <h5>Roberto Lima</h5>
+                    <p class="expertise">Desenvolvimento Pessoal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <h3>Nossos Mentores</h3>
+            <ul>
+                <li>Estratégias de Negócio</li>
+                <li>Planejamento Financeiro</li>
+                <li>Desenvolvimento Pessoal</li>
+                <li>Marketing e Design</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="mentores.html">Mentores</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Benefícios</h3>
+            <ul>
+                <li>Mentorias Gratuitas</li>
+                <li>Conteúdo Prático</li>
+                <li>Comunidade Engajada</li>
+                <li>Crescimento Profissional</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Recursos</h3>
+            <ul>
+                <li>Guias de Mentoria</li>
+                <li>Artigos e Pesquisas</li>
+                <li>Dicas de Carreira</li>
+                <li>Ferramentas Práticas</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Receba dicas e novidades sobre mentoria diretamente no seu e-mail.</p>
+            <div class="subscribe">
+                <input type="email" placeholder="Seu e-mail" id="newsletter-email">
+                <a class="lightblue" href="#" onclick="subscribeNewsletter(event)">Inscrever-se</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2025 Todos os direitos reservados | Rede Mentor - Sua jornada guiada pelos melhores mentores</p>
+        </div>
+    </footer>
+
+    <!-- Modal do Mentor -->
+    <div id="mentorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMentorModal()">×</span>
+
+            <!-- Cabeçalho com foto, nome e expertise -->
+            <div class="mentor-modal-header">
+                <div class="mentor-photo">
+                    <img id="modalMentorImg" src="" alt="Foto do mentor">
+                </div>
+                <div class="mentor-header-info">
+                    <h3 id="modalMentorName"></h3>
+                    <p id="modalMentorExpertise" class="expertise"></p>
+                </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="mentor-bio">
+                <p id="modalMentorBio"></p>
+            </div>
+
+            <!-- Estatísticas -->
+            <div class="modal-stats">
+                <div class="stat-item">
+                    <i class="fas fa-user-friends"></i>
+                    <div>
+                        <h4 id="modalMentees">0</h4>
+                        <p>Mentes Apoiados</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <h4 id="modalSessions">0</h4>
+                        <p>Sessões Realizadas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão Agendar -->
+            <div class="modal-footer">
+                <a id="modalConnectLink" href="#" target="_blank" class="btn-connect">
+                    <i class="fas fa-calendar-alt"></i> Agendar Mentoria
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Dados dos Mentores
+        const mentorData = {
+            "Ana Silva": {
+                expertise: "Especialista em Carreira & Transição",
+                bio: "Com 15 anos de experiência em RH e coaching, ajudo profissionais a fazerem transições de carreira com confiança e estratégia.",
+                mentees: 89,
+                sessions: 320,
+                connectLink: "https://calendly.com/ana-silva-mentoria"
+            },
+            "Carlos Mendes": {
+                expertise: "Líder de Equipes & Gestão",
+                bio: "Ex-CEO de startup, hoje ajudo líderes a construírem times de alta performance e cultura organizacional forte.",
+                mentees: 67,
+                sessions: 280,
+                connectLink: "https://calendly.com/carlos-mendes"
+            },
+            "Julia Costa": {
+                expertise: "Empreendedora & Startups",
+                bio: "Fundei 3 startups e levantei +R$5M. Mentoro empreendedores a validarem ideias e escalarem com propósito.",
+                mentees: 145,
+                sessions: 610,
+                connectLink: "https://calendly.com/julia-costa"
+            },
+            "Roberto Lima": {
+                expertise: "Desenvolvimento Pessoal",
+                bio: "Psicólogo e coach ontológico. Ajudo pessoas a superarem bloqueios e alcançarem seu máximo potencial.",
+                mentees: 102,
+                sessions: 490,
+                connectLink: "https://calendly.com/roberto-lima"
+            },
+            "Fernanda Torres": {
+                expertise: "Tecnologia & Inovação",
+                bio: "Engenheira de software e mentora de mulheres na tecnologia. Foco em carreira tech e liderança técnica.",
+                mentees: 78,
+                sessions: 310,
+                connectLink: "https://calendly.com/fernanda-torres"
+            },
+            "Paulo Santos": {
+                expertise: "Negócios & Escala",
+                bio: "Consultor de escala com passagens por McKinsey e Google. Ajudo empresas a crescerem 10x com eficiência.",
+                mentees: 110,
+                sessions: 540,
+                connectLink: "https://calendly.com/paulo-santos"
+            }
+        };
+
+        // Filtro de Mentores
+        function filterMentors(category) {
+            const mentors = document.querySelectorAll('.mentor-card');
+            const buttons = document.querySelectorAll('.btn-filter');
+
+            buttons.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${category}'`));
+            });
+
+            mentors.forEach(mentor => {
+                const show = category === 'all' || mentor.dataset.category === category;
+                mentor.style.display = show ? 'block' : 'none';
+            });
+        }
+
+        // Abrir Modal
+        document.querySelectorAll('.mentor-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const name = card.querySelector('h5').textContent.trim();
+                const data = mentorData[name];
+
+                if (data) {
+                    document.getElementById('modalMentorImg').src = card.querySelector('img').src;
+                    document.getElementById('modalMentorName').textContent = name;
+                    document.getElementById('modalMentorExpertise').textContent = data.expertise;
+                    document.getElementById('modalMentorBio').textContent = data.bio;
+                    document.getElementById('modalMentees').textContent = data.mentees;
+                    document.getElementById('modalSessions').textContent = data.sessions;
+                    document.getElementById('modalConnectLink').href = data.connectLink;
+
+                    document.getElementById('mentorModal').style.display = 'flex';
+                }
+            });
+        });
+
+        // Fechar Modal
+        function closeMentorModal() {
+            document.getElementById('mentorModal').style.display = 'none';
+        }
+
+        // Fechar ao clicar fora
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('mentorModal');
+            if (e.target === modal) closeMentorModal();
+        });
+
+        // Animação de Entrada
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.mentor-card').forEach(card => observer.observe(card));
+
+        // Newsletter
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value.trim();
+            if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert(`Inscrição realizada com sucesso! Você receberá novidades em: ${email}`);
+                document.getElementById('newsletter-email').value = '';
+            } else {
+                alert('Por favor, insira um e-mail válido.');
+            }
+        }
+
+        // Tornar funções globais
+        window.subscribeNewsletter = subscribeNewsletter;
+        window.closeMentorModal = closeMentorModal;
+        window.filterMentors = filterMentors;
+    </script>
+</body>
+</html>
